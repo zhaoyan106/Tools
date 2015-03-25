@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="DateViewController">
+            <connections>
+                <outlet property="dateFromTextField" destination="ahN-aO-FI4" id="I7u-ER-BjP"/>
+                <outlet property="dateToTextField" destination="MCW-fU-R46" id="Pyd-4G-MO6"/>
+                <outlet property="json2NormalBtn" destination="fiH-HW-jhT" id="7lu-uJ-sJ0"/>
+                <outlet property="normal2JSONBtn" destination="B2J-tW-Ucm" id="Ijd-jf-CfA"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="598" height="326"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button horizontalHuggingPriority="463" verticalHuggingPriority="765" translatesAutoresizingMaskIntoConstraints="NO" id="fiH-HW-jhT">
+                    <rect key="frame" x="14" y="216" width="286" height="32"/>
+                    <buttonCell key="cell" type="push" title="JSON2Normal" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="46c-MS-4GX">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="json2NormalBtnClick:" target="-2" id="iMY-jU-w8g"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="B2J-tW-Ucm">
+                    <rect key="frame" x="298" y="216" width="286" height="32"/>
+                    <buttonCell key="cell" type="push" title="Normal2JSON" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2vH-FM-KEa">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="normal2JSONBtnClick:" target="-2" id="HvQ-DC-u1d"/>
+                    </connections>
+                </button>
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ahN-aO-FI4">
+                    <rect key="frame" x="20" y="284" width="558" height="22"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Date(1395814886531+0800)" drawsBackground="YES" id="Pz5-79-6TX">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MCW-fU-R46">
+                    <rect key="frame" x="20" y="252" width="558" height="22"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="2014-03-04" drawsBackground="YES" id="SPf-nr-O2G">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="B2J-tW-Ucm" secondAttribute="trailing" constant="20" id="1ZH-py-ynG"/>
+                <constraint firstAttribute="trailing" secondItem="MCW-fU-R46" secondAttribute="trailing" constant="20" id="1kB-wK-R9h"/>
+                <constraint firstItem="fiH-HW-jhT" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="5NL-48-2SO"/>
+                <constraint firstItem="fiH-HW-jhT" firstAttribute="width" secondItem="B2J-tW-Ucm" secondAttribute="width" id="70i-yv-KVT"/>
+                <constraint firstAttribute="trailing" secondItem="ahN-aO-FI4" secondAttribute="trailing" constant="20" id="DpX-81-iQa"/>
+                <constraint firstItem="ahN-aO-FI4" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" symbolic="YES" id="Svf-M6-1Cl"/>
+                <constraint firstItem="ahN-aO-FI4" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="Xar-1J-RH3"/>
+                <constraint firstItem="fiH-HW-jhT" firstAttribute="top" secondItem="MCW-fU-R46" secondAttribute="bottom" constant="8" id="m5f-iK-cPI"/>
+                <constraint firstItem="B2J-tW-Ucm" firstAttribute="top" secondItem="MCW-fU-R46" secondAttribute="bottom" constant="8" id="nfc-fY-jPw"/>
+                <constraint firstItem="B2J-tW-Ucm" firstAttribute="leading" secondItem="fiH-HW-jhT" secondAttribute="trailing" constant="10" id="pMR-HZ-pO4"/>
+                <constraint firstItem="MCW-fU-R46" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="tCY-6I-kmN"/>
+                <constraint firstItem="MCW-fU-R46" firstAttribute="top" secondItem="ahN-aO-FI4" secondAttribute="bottom" constant="10" symbolic="YES" id="zbp-8Y-yUW"/>
+            </constraints>
+        </customView>
+    </objects>
+</document>
